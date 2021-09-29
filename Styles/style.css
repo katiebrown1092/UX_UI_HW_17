@@ -6,146 +6,299 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-footer {
-    font-family: Montserrat;
-}
+    align-items: center;}
 
 #header-logo {
-    padding: 48px;
-}
+    padding: 48px;}
+
+#globalNav{
+    margin-right: 24px;}
+
 .nav-item {
     padding: 24px;
     font-family: montserrat;
-    font-size: 18px;
+    font-size: 18px;}
+.nav-item:hover {
+    color: #F6BB43;
 }
+ 
 ul {
     list-style: none;
-    display: flex;
-    }
+    display: flex;}
     
 
 
 #hero {
        font-family: montserrat;
+       padding-bottom: 88px;
+       align-items: center;
        margin: auto;
-       width: 1000px;
-       display: grid;
-       grid-template-columns: 1fr 1fr;
+       display: flex;
+       justify-content: center;
+       max-width: 1100px;
+       grid-template-columns: 1fr 1fr 1fr;
        grid-template-rows: 1fr;
        grid-template-areas: 
-       "hero_image heroText";
-}
+       "hero_image verticalLine heroText";}
 
 #hero_image {
-    margin: auto;
-    justify-content: right;
-}
+    margin: 0;
+    width: 425px;
+    height: auto;
+    padding-right: 16px;
+    padding-left: 48px; }
+
+.verticalLine {
+    height: 450px;
+    border-left: 1px solid #000000;  }
 
 .heroText {
-    align-content: left;
     text-align: left;
-    max-height: 300px;
     margin: auto;
-    border: black 2px;
+    width: 685px;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-width: 300px;}
+
+.heroText h1 {
+    font-size: 36px;
+    font-weight: 400;}
+
+.heroText p {
+    font-weight: 300;
+    font-size: 36px;}
+
+.moreButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;}
+
+span > .text {
+    font-family: montserrat;
+    font-style: normal;
+    font-weight: 300;}
+
+
+.the-arrow {
+    width: 20px;
+   
+    transition: all 0.2s;
+}
+.the-arrow.-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.the-arrow.-left > .shaft {
+    width: 0;
+    height: 2px;
+    background-color: #F6BB43;
+}
+.the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
+    width: 0;
+    background-color: #F6BB43;
+    height: 2px;
 }
 
-.heroText button {
-    border: black left 2px;
-    background-color: none;
-    font-size: 18px;
-    cursor: pointer;
+
+.the-arrow.-right {
+    top: 50%;
+    padding-left: 20px;
 }
+.the-arrow.-right > .shaft {
+    width: 2px;
+    transition-delay: 0.2s;
+}
+.the-arrow.-right > .shaft:before, .the-arrow.-right > .shaft:after {
+    width: 16px;
+    transition-delay: 0.3s;
+    transition: all 0.5s;
+}
+.the-arrow.-right > .shaft:before {
+    transform: rotate(40deg);
+}
+.the-arrow.-right > .shaft:after {
+    transform: rotate(-40deg);
+}
+.the-arrow > .shaft {
+    background-color: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: all 0.2s;
+    transition-delay: 0;
+    will-change: transform;
+}
+.the-arrow > .shaft:before, .the-arrow > .shaft:after {
+    background-color: black;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.2s;
+    transition-delay: 0;
+}
+.the-arrow > .shaft:before {
+    transform-origin: top right;
+}
+.the-arrow > .shaft:after {
+    transform-origin: bottom right;
+}
+.animated-arrow {
+    display: inline-block;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s;
+}
+.animated-arrow:hover {
+    color: black;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft {
+    width: 48px;
+    transition-delay: 0.1s;
+    background-color: #F6BB43;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before, .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+    width: 20px;
+    transition-delay: 0.1s;
+    background-color: #F6BB43;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before {
+    transform: rotate(40deg);
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:after {
+    transform: rotate(-40deg);
+}
+.animated-arrow:hover > .main {
+  
+    transform: translateX(80px);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+    width: 0;
+    transform: translateX(200%);
+    transition-delay: 0;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+    width: 0;
+    transition-delay: 0;
+    transition: all 0.1s;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+    transform: rotate(0);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+    transform: rotate(0);
+}
+.animated-arrow > .main {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+.animated-arrow > .main > .text {
+    margin: 0 16px 0 0;
+    line-height: 1;
+}
+.animated-arrow > .main > .the-arrow {
+    position: relative;
+}
+
+
+
 
 
 #projects {
     margin: auto;
-}
+    height: 1100px;
+    width: auto;
+    padding: 48px;}
+
 .projects_container {
     display: grid;
     margin: auto;
-    max-width: 800px;
-    min-height: 800px;
-   grid-template-rows: 50% 50%;
-   grid-template-columns: 50% 50% ;
-   grid-template-areas: 
-   "deptOfEd pgk"
-   "govid grnbox";
-
-}
+    height: 100%;
+    min-width: min-content;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50% ;
+    grid-template-areas: 
+    "deptOfEd pgk"
+    "govid grnbox";
+    gap: 16px 12px;}
 
 .projectTile {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+    min-width: 300px;
     align-items: center;
     display: flex;
     position: relative;
-}
+    border: black solid 1px;
+    border-radius: 8px;}
+
 #deptOfEd{
     grid-area: deptOfEd;
-    border: black solid;
     font-family: montserrat;
     justify-content: center;
-    align-content: center;
-}
+    align-content: center;}
 
 #pgk {
     grid-area: pgk;
-    border: black solid;
     font-family: montserrat;
     justify-content: center;
-    align-content: center;
-}
+    align-content: center;}
 
 #govid {
     grid-area: govid;
-    border: black solid;
     font-family: montserrat;
     justify-content: center;
-    align-content: center;
-}
+    align-content: center;}
 
 #grnbox {
     grid-area: grnbox;
-    border: black solid;
     font-family: montserrat;
     justify-content: center;
-    align-content: center;
-}
+    align-content: center;}
+
 .project_header {
-    text-align: center;
-}
+    text-align: center;}
+
 .project_type {
-    text-align: center;
-}
+    text-align: center;}
 
-#skills_section {
-    font-family: montserrat;
+
+
+#skillsSection {
+    margin: 100px;
+    height: 800px;
+    display:flex;
+    align-items: center;
     justify-content: center;
-    align-content: center;
-    text-align: center;
-    border: black solid 2px;
-    width: 375px;
-    height: 375px;
-    border-radius: 375px;
-    background-color: #F6BB43;
-    margin: auto;
-}
+}    
 
+#skillsCircle {
+    font-family: montserrat;
+    font-size: 32px;
+    line-height: auto;
+    text-align: center;
+    border: black solid 1px;
+    min-width:750px;
+    min-height: 750px;
+    border-radius: 200%;
+    background-color: #F6BB43;
+    margin: auto;}
 .skill1 {
     width:auto;
     height: auto;
     left: auto;
-    top: auto;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 30px;
-    /* or 39% */
     letter-spacing: 0.16em;
     color: #000000;}
 .skill2 {
@@ -153,12 +306,8 @@ ul {
     height: auto;
     left: auto;
     top: auto;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    /* or 39% */
     letter-spacing: 0.18em;
     color: #000000;}
 .skill3 {
@@ -166,12 +315,8 @@ ul {
     height: auto;
     left: auto;
     top: auto;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 30px;
-    /* or 39% */
     letter-spacing: -0.01em;
     color: #000000;}
 .skill4 {
@@ -179,12 +324,8 @@ ul {
     height: auto;
     left: auto;
     top: auto;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 30px;
-    /* or 39% */
     letter-spacing: -0.04em;
     color: #000000;}
 .skill5 {
@@ -192,12 +333,8 @@ ul {
     height: auto;
     left: auto;
     top: auto;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 30px;
-    /* or 39% */
     letter-spacing: 0.0em;
     color: #000000;}
 .skill6 {
@@ -205,12 +342,8 @@ ul {
     height: auto;
     left: auto;
     top: auto;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    /* or 39% */
     letter-spacing: 0.02em;
     color: #000000;}
 .skill7 {
@@ -218,12 +351,33 @@ ul {
     height: auto;
     left: auto;
     top: auto;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: 300;
-    font-size: 24px;
-    line-height: 30px;
-    /* or 39% */
     letter-spacing: 0.09em;
     color: #000000;}
 
+
+
+
+footer {
+    font-family: Montserrat;
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+#footerText {
+    padding: 48px;
+}
+#footerText>h1 {
+    font-size: 36px;
+    font-weight: 500;
+}
+#footerText>p {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+#footer>a {
+    font-size: 24px;
+    color: black;}

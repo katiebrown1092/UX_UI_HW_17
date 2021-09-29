@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Katie Brown</title>
     <link rel="stylesheet" href="./Styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -16,7 +16,7 @@
         <div id="header-logo">
             <img src="assets/small_logo.png" alt="Katie Brown Logo">
         </div>
-        <div>
+        <div id="globalNav">
             <ul>
                 <li class="nav-item">Resume</li>
                 <li class="nav-item">About</li>
@@ -24,19 +24,34 @@
             </ul>
         </div>
     </header>
-    <div style="text-align: center;">
+
     
 
     <section id="hero">
-        <img height="500px" src="assets/Self Hero Image.png" alt="Self Portrait" id="hero_image">
+        <img src="assets/selfHeroImage.png" alt="Self Portrait" id="hero_image">
+        <div class="verticalLine"></div>
         <div class="heroText">
             <h1>Hi there, the name’s Katie Brown.</h1>
-            <p>I’m UX/UI Designer living it up  Houston Central Oregon. Just the new kid with on the dribble block, fresh perspective included.</p>
-            <button>More about me</button>
+            <p>I’m UX/UI Designer living it up in <strike>Houston</strike> Central Oregon  
+                because I need <strike>wide</strike> white open spaces.</p>
         </div>
+        <div class="moreButton">
+        <a class="animated-arrow" href="https://google.com">
+            <span class="the-arrow -left">
+            <span class="shaft"></span>
+            </span>
+            <span class="main">
+            <span class="text">
+            More about me
+            </span>
+            <span class="the-arrow -right">
+                <span class="shaft"></span>
+            </span>
+            </span>
+        </a>
+      </div> 
     </section>
 
-    <br> &nbsp;<br>
 
     <section id="projects">
         <div class="projects_container">
@@ -72,8 +87,8 @@
 
     </section>
 
-     <br> &nbsp; <br>
-        <section id="skills_section">
+    <section id=skillsSection>
+        <div id="skillsCircle">
             <h1 class="skill1">Storytelling</h1>
             <h1 class="skill2">User Research</h1>
             <h1 class="skill3">Visual Communication</h1>
@@ -81,8 +96,9 @@
             <h1 class="skill5">Project Management</h1>
             <h1 class="skill6">Rapid Prototyping</h1>
             <h1 class="skill7">Wireframing</h1>
-        </section>
-   
+        </div>
+    </section>
+
     <footer>
         <div id="footerText">
             <h1>Katie Brown</h1>
